@@ -1,12 +1,11 @@
 #include <stdio.h>
+#include <math.h>
 
 void update(int *a,int *b) {
     int sac = *a;
-	*a = *a + *b;
-	*b = *b - sac;
-	*b = abs(*b);
-	*a = abs(*a);
-
+    *a = (*a + *b);
+	*b = abs((sac - *b));
+	
 }
 
 int main() {
